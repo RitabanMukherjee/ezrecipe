@@ -1,39 +1,239 @@
-.App {
+html{
+  scroll-behavior: smooth;
+}
+
+.App{
   text-align: center;
+  /* background-color: lightblue; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  height: 5vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.link{
+  text-decoration: none;
+  transition: all 0.1s linear;
+  color: blue;
+  
+
 }
 
-.App-header {
+.link:hover{
+  color: brown;
+  border-bottom: 1px solid brown;
+}
+
+.form-input{
+  /* background-color: lightblue; */
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.text-input{
+  height: 5vh;
+  width: 50vw;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  transition: all 0.1s;
+  background-color: lightblue;
+}
+
+.text-input:focus{
+  border-radius: 2rem;
+  border-color: blue;
+}
+
+.gap-div{
+  width: 0.5vw;
+  height: 2vh;
+}
+
+.submit-btn{
+  font-size: 1rem;
+  background-color: white;
+  color: blue;
+  transition: all 0.1s;
+  border-radius: 1rem;
+}
+
+.submit-btn:hover{
+  font-size: 1.4rem;
+  color: white;
+  background-color: blue;
+}
+
+.home{
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
   min-height: 100vh;
+  color: white;
+  margin-top: 4vh;
+}
+
+.loading-div{
+  color: blue;
+   height: 100vh;
+   width: 100vw;
+   /* background-color: lightblue; */
+}
+
+.meal{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 95vh;
+  width: 25vw;
+  background-color: lightblue;
+  color: blue;
+  transition: all 0.1s;
+  border-radius: 2rem;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.meal:hover{
+  background-color: blue;
+  color: white;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+.img{
+  width: 25vw;
+  height: 45vh;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.text{
+  height: 50vh;
+}
+
+.btn{
+  font-size: 1rem;
+  transition: all 0.1s;
+  background-color: lightblue;
+  color: brown;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+.meal:hover > .btn{
+  color: white;
+  background-color: blue;
+}
+
+
+.favorites{
+  /* margin-top: 2vh; */
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 95vh;
+  color: blue;
+}
+
+.empty-favorites{
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  color: blue;
+}
+
+.favorites-number{
+  width: 25vw;
+}
+
+.instruction-div{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  width: 50vw;
+  margin-left: 25vw;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.ingredient-div{
+  font-weight: bold;
+}
+
+.img-recipe{
+  width: 50vw;
+  height: 70vh;
+}
+
+.not-found-div{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.error-div{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media screen and (max-width: 700px){
+  .home{
+    flex-direction: column;
   }
-  50% {
-    transform: translateY(10px);
+  .meal{
+    width: 90vw;
   }
-  100% {
-    transform: translateY(0px);
+  .img{
+    width: 90vw;
+  }
+  .btn{
+    margin-bottom: 1.2rem;
+  }
+  .form-input{
+    flex-direction: column;
+    height: 15vh;
+  }
+  .text-input{
+    height: 10vh;
+    width: 75vw;
+  }
+  .img-recipe{
+    width: 70vw;
+    height: 50vh;
+  }
+  .favorites-number{
+    width: 50vw;
   }
 }
